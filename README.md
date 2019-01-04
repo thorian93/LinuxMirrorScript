@@ -1,9 +1,9 @@
-ESXi Scripts by Thorian93
-=========================
+Linux Mirror Update Script by Thorian93
+=======================================
 
-This is a collection of useful scripts for the ESXi Hypervisor I found or created.
+This is a script that aims to synchronize Linux mirrors to a local mirror server.
+It does this while trying to support all major distributions and by staying flexible.
 
-All credit goes to the original authors, unless the scripts are my own work.
 
 Here Be Dragons!
 ----------------
@@ -12,12 +12,14 @@ Everything in this repository is provided as is and I cannot and will not give a
 
 **Use at your own risk!**
 
+<!--
 Credits
 -------
 
 This is a list of credits, kudos to all of them!
 
-- [virtuallyGhetto](https://www.virtuallyghetto.com/)
+- [foo](https://www.example.com/)
+-->
 
 License
 -------
@@ -32,4 +34,4 @@ This repository is maintained by [Thorian93](https://github.com/thorian93).
 Feedback, bug-reports, requests, ...
 ------------------------------------
 
-[Are welcome and highly appreciated!](https://github.com/thorian93/esxi-scripts/issues)
+[Are welcome and highly appreciated!](https://github.com/thorian93/LinuxMirrorScript/issues)
