@@ -1,20 +1,26 @@
 #!/bin/env bash
-# Linux Mirror Server Refresh Script v 1.2
-# Robin Gierse (info@thorian93.de)
-# 2018-03-28: Initial commit. Script is productive.
-# 2018-05-07: Update Script with third party repository of iuscommunity.org
-# 2018-10-06: Update script with some improvements
-# 2018-12-02: Add debmirror abilities for debian
-# 2018-12-17: Add debmirror abilities for ubuntu
-# 2018-12-19: Add rsync abilities for fedora - still testing
-# 2018-12-30: Add torproject repository - still testing
-# 2019-01-02: Add Ubuntu Bionic release
-# 2019-01-09: Tweak formatting and structure and update with some stuff - testing necessary
-# 2019-02-28: Add Debian i386 architecture
-# 2019-03-27: Add Debian security repository and did some formatting
-# 2019-07-21: Add Debian Buster
-# 2020-04-04: Remove Fedora Support as it was never really stable.
-# 2020-04-07: Remove torproject repository
+#
+# Written by: Robin Gierse - info@thorian93.de - on 20180328
+#
+# Purpose:
+# This script mirrors several remote repositories to a mirror server.
+#
+# Version: 1.0 on 20180328 - Initial commit. Script is productive.
+# Version: 1.1 on 20180507 - Update Script with third party repository of iuscommunity.org
+# Version: 1.2 on 20181006 - Update script with some improvements
+# Version: 1.3 on 20181202 - Add debmirror abilities for debian
+# Version: 1.4 on 20181217 - Add debmirror abilities for ubuntu
+# Version: 1.5 on 20181230 - Add torproject repository - still testing
+# Version: 2.0 on 20190102 - Add Ubuntu Bionic release
+# Version: 2.1 on 20190109 - Tweak formatting and structure and update with some stuff - testing necessary
+# Version: 2.2 on 20190228 - Add Debian i386 architecture
+# Version: 2.3 on 20190327 - Add Debian security repository and did some formatting
+# Version: 2.4 on 20190721 - Add Debian Buster
+# Version: 2.5 Update script for github
+#
+# Usage:
+# ./LinuxMirrorScript.sh
+#
 # Credits:
 # https://www.tobanet.de/dokuwiki/debian:debmirror
 # https://help.ubuntu.com/community/Debmirror
@@ -23,8 +29,6 @@
 # Variables
 ## Basic
 rsync_exe="$(which rsync)"
-yum_exe="$(which yum)"
-cp_exe="$(which cp)"
 createrepo_exe="$(which createrepo)"
 reposync_exe="$(which reposync)"
 mkdir_exe="$(which mkdir) -p"
@@ -32,7 +36,7 @@ logpath="/var/log/linux_mirror"
 logfile="$logpath/$(date +%Y%m%d)_refresh_linux_repos.log"
 start_date="$(date)"
 
-## Repository
+## Repositories
 base_url="mirror.netcologne.de"
 base_local_repo="/var/www/repos"
 centos_url="$base_url/centos"
